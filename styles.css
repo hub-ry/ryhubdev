@@ -1,9 +1,16 @@
-body {
-  background-color: rgb(249, 239, 228);
-  font-family: 'Times New Roman', Times, serif;
-  
+:root {
+  --bg-color: rgb(249, 239, 228);
+  --text-color: #000;
+  --chevron-color: rgb(120, 36, 36);
 }
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Times New Roman', Times, serif;
+  transition: background-color 0.6s ease, color 0.6s ease;
+  
+}
 
 .container {
   margin-left: 20vw;
@@ -14,12 +21,12 @@ body {
 .header {
   display: flex;
   gap: 10px;
-
 }
-.header a {
-color: black;
-text-decoration: none;
 
+.header a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.4s ease;
 }
 
 .name {
@@ -28,8 +35,29 @@ text-decoration: none;
 
 .imbedded {
   text-decoration: none;
+  color: var(--text-color);
 }
 
 .about {
   margin-top: 20px;
+}
+
+.chevron {
+  width: 60px;
+  height: 60px;
+  clip-path: polygon(0 0, 50% 0, 100% 50%, 50% 100%, 0 100%, 50% 50%);
+  cursor: pointer;
+  animation: idle-spin 8s infinite ease-in-out;
+  transition: transform 0.6s ease;
+  margin-bottom: 20px;
+  background: var(--chevron-color);
+}
+
+@keyframes idle-spin {
+  0%, 95% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.chevron:hover {
+  transform: scale(1.1);
 }
