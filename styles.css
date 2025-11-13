@@ -1,0 +1,35 @@
+body {
+  background-color: rgb(249, 239, 228);
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+
+
+.container {
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 10vh;
+}
+
+.header {
+  display: flex;
+  gap: 10px;
+
+}
+.header a {
+color: black;
+text-decoration: none;
+
+}
+
+.name {
+  padding-top: 40px;
+}
+
+.imbedded {
+  text-decoration: none;
+}
+
+.about {
+  margin-top: 20px;
+}
